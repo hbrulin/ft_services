@@ -32,11 +32,6 @@ spec:
   selector:
     app: nginx-app
 ---
-configMapGenerator:
-- name: index-config
-  files:
-  - containers/nginx/index.html
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -69,15 +64,6 @@ spec:
         - containerPort: 443
           name: https
         imagePullPolicy: Never
-        volumeMounts:
-        - name: index-config
-          mountPath: /var/lib/nginx/html/index.html
-          subPath: index.html
-          readOnly: true
-      volumes:
-      - name: index-config
-        configMap:
-            name: index-config
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
