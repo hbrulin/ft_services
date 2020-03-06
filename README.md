@@ -279,4 +279,12 @@ https://kubernetes.io/fr/docs/concepts/configuration/secret/
 #the evaluation step and running minikube docker-env directly. However, this 
 #will not perform the configuration – the output needs to be evaluated for that.
 #Cela accelere le workflow : https://stackoverflow.com/questions/52310599/what-does-minikube-docker-env-mean 
+
+
+#FTPS
+Utiliser lftp dans la console du container ftps. - apk add lftp 
+http://momh.fr/tutos/Linux/lftp 
+
+
+
 # ft_services_2

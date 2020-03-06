@@ -49,6 +49,7 @@ for path in $sed_list
 do
 	sed_set_ip $server_ip $path
 done
+sed -i.bak 's/MINIKUBE_IP/'"$server_ip"'/g' srcs/containers/ftps/setup.sh
 
 echo -ne "\033[1;32m+>\033[0;33m Update grafana db ... \n"
 echo "UPDATE data_source SET url = 'http://$server_ip:8086'" | sqlite3 srcs/containers/grafana/grafana.db
@@ -56,7 +57,7 @@ echo "UPDATE data_source SET url = 'http://$server_ip:8086'" | sqlite3 srcs/cont
 echo -ne "\033[1;32m+>\033[0;33m Link docker local image to minikube ... \n"
 eval $(minikube docker-env)
 
-names="nginx influxdb grafana mysql phpmyadmin wordpress telegraf"
+names="nginx influxdb grafana mysql phpmyadmin wordpress telegraf ftps"
 
 for name in $names
 do
@@ -72,6 +73,8 @@ sleep 1
 sed -i.bak 's/http:\/\/'"$server_ip"'/http:\/\/IP/g' srcs/containers/wordpress/wp-config.php
 sleep 1
 sed -i.bak 's/http:\/\/'"$server_ip"'/http:\/\/IP/g' srcs/yaml/telegraf.yaml
+sleep 1
+sed -i.bak 's/'"$server_ip"'/MINIKUBE_IP/g' srcs/containers/ftps/setup.sh
 sleep 1
 
 echo -ne "\033[1;32m+>\033[0;33m Waiting for the site to be up "
