@@ -284,7 +284,7 @@ https://kubernetes.io/fr/docs/concepts/configuration/secret/
 #FTPS
 Utiliser lftp dans la console du container ftps. - apk add lftp 
 http://momh.fr/tutos/Linux/lftp 
-
+open -u user ftps-svc 
 
 
 # ft_services_2
