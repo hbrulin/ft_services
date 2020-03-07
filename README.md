@@ -237,8 +237,6 @@ En chiffrement explicite:
 - TLS : commande AUTH LSC demande au serveur de chiffrer le transfert de commande en TLS, et PROT P demande le chiffrement du transfert de données en TLS.
 - SSL : AUTH SSL pour transfert de commande et de données via SSL.
 
-URI : ftpes:// ou ftp:// (bien secure?)
-
 FTP et HTTP sont tous deux hautement considérés comme les protocoles de transfert de fichiers les plus souvent utilisés pour transférer des données entre un client et un serveur. HTTP fonctionne de la même manière avec les fonctions communes entre FTP et SMTP. Cependant, ils ont aussi établi des différences.
 
 FTP
@@ -256,6 +254,10 @@ HTTP
 - Il ne nécessite aucune forme d'authentification.
 - Le contenu qui sera transféré vers un périphérique via HTTP sera enregistré dans la mémoire du périphérique.
 
+Utiliser lftp dans la console du container ftps. - apk add lftp - client ftp qui va faire requete serveur
+http://momh.fr/tutos/Linux/lftp 
+open -u user ftps-svc 
+
 <strong>#Grafana</strong> \
 Logiciel qui permet la virtualisation et la mise en forme de données métriques. Permet de réaliser dahsboard et graphiques depuis pls sources, dont des bases de données dites "time series databases" comme Influxdb.
 
@@ -267,53 +269,49 @@ https://www.replex.io/blog/how-to-install-access-and-add-heapster-metrics-to-the
 kubectl delete clusterrolebinding kubernetes-dashboard : necessary priori to applying yaml file for dashboard
 https://kubernetes.io/fr/docs/tasks/access-application-cluster/web-ui-dashboard/
 
+<strong>#influxdb & kubernetes secrets<s\trong> \ 
+Kubernetes secrets are a way to store sensitive information (such as passwords) and inject them into running containers as either environment variables or mounted volumes. This is perfect for storing database credentials and connection information, both to configure InfluxDB and to tell Grafana how to connect to it.
+
+https://opensource.com/article/19/2/deploy-influxdb-grafana-kubernetes
+https://kubernetes.io/fr/docs/concepts/configuration/secret/
+
+<strong>#eval minikube docker env</strong> \
+The command minikube docker-env returns a set of Bash environment variable exports 
+to configure your local environment to re-use the Docker daemon inside the Minikube instance.
+Passing this output through eval causes bash to evaluate these exports and put them into effect.
+You can review the specific commands which will be executed in your shell by omitting 
+the evaluation step and running minikube docker-env directly. However, this 
+will not perform the configuration – the output needs to be evaluated for that.
+
+<strong>#nginx configuration file</strong>
+Liste parametres : http://nginx.org/en/docs/ngx_core_module.html#worker_connections 
+http, server, events, location, s'appellent un contexte.
+
+- <strong>worker_processes	auto<\strong> : it will be determined automatically by the number of core
+- <strong>worker_connections	1024<\strong> : Sets the maximum number of simultaneous connections that can be opened by a worker process.
+- MIME = Multipurpose Internet Mail Extensions. It is a standard that indicates the nature and format of a document, file, or assortment of bytes. All web browsers use the MIME type to determine how to process a URL. Hence, it is essential that Nginx send the correct MIME type in the response’s Content-Type header.
+- <strong>include        /etc/nginx/mime.types;<\strong> : Maps file name extensions to MIME types of responses. 
+- <strong>default_type       application/octet-stream;<\strong> : make a particular location emit the “application/octet-stream” MIME type for all requests. A MIME attachment with the content type "application/octet-stream" is a binary file. Typically, it will be an application or a document that must be opened in an application, such as a spreadsheet or word processor.
+- <strong>sendfile      on;<\strong> : permet de forcer l’utilisation de l’appel système sendfile pour tout ce qui concerne l’envoi de fichiers. sendfile permet de transférer des données d’un descripteur de fichier vers un autre directement dans l’espace noyau. Se substitue à l’utilisation combinée de read et write. Si vous servez des fichiers statiques stockés localement, sendfile est indispensable pour améliorer les performances de votre serveur Web.
+	https://thoughts.t37.net/optimisations-nginx-bien-comprendre-sendfile-tcp-nodelay-et-tcp-nopush-2ab3f33432ca
+- <strong>keepalive_timeout           3000;<\strong> :  indicating the minimum amount of time an idle connection has to be kept opened (in seconds)
+- <strong>gzip on;<\strong> : helps to reduce the size of transmitted data by half or even more. http://nginx.org/en/docs/http/ngx_http_gzip_module.html
+
 <strong>#Ressources</strong>
 - Installation :
 	- https://kubernetes.io/fr/docs/tasks/tools/install-minikube/ 
 	- https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/
 	- https://minikube.sigs.k8s.io/docs/reference/environment_variables/ 
 - Minikube : https://kubernetes.io/fr/docs/setup/learning-environment/minikube/
-- https://www.ionos.fr/digitalguide/serveur/configuration/tutoriel-kubernetes/ 
-- https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/ 
-- https://kubernetes.io/docs/tutorials/hello-minikube/ 
+	- https://www.ionos.fr/digitalguide/serveur/configuration/tutoriel-kubernetes/ 
+	- https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/ 
+	- https://kubernetes.io/docs/tutorials/hello-minikube/ 
 - https://time-to-first-byte.info/tutoriel-kubernetes-une-introduction-aux-bases/ 
 - https://www.youtube.com/watch?v=37VLg7mlHu8&list=PLn6POgpklwWqfzaosSgX2XEKpse5VY2v5&index=1
 - https://www.youtube.com/watch?v=b5vJsYR-Vbo&t=4087s
-- ngnonx config files : http://nginx.org/en/docs/ngx_core_module.html#worker_connections 
-
-#cannot connect to docker daemon
-https://unix.stackexchange.com/questions/252684/why-am-i-getting-cannot-connect-to-the-docker-daemon-when-the-daemon-is-runnin 
-
-#influxdb & kubernetes secrets \ 
-Kubernetes secrets are a way to store sensitive information (such as passwords) and inject them into running containers as either environment variables or mounted volumes. This is perfect for storing database credentials and connection information, both to configure InfluxDB and to tell Grafana how to connect to it.
-You need four bits of information to accomplish both tasks:
-
-INFLUXDB_DATABASE—the name of the database to use
-INFLUXDB_HOST—the hostname where the database server is running
-INFLUXDB_USERNAME—the username to log in with
-INFLUXDB_PASSWORD—the password to log in with
-
-https://opensource.com/article/19/2/deploy-influxdb-grafana-kubernetes
-https://kubernetes.io/fr/docs/concepts/configuration/secret/
-
-
-#The command minikube docker-env returns a set of Bash environment variable exports 
-#to configure your local environment to re-use the Docker daemon inside the Minikube instance.
-#Passing this output through eval causes bash to evaluate these exports and put them into effect.
-#You can review the specific commands which will be executed in your shell by omitting 
-#the evaluation step and running minikube docker-env directly. However, this 
-#will not perform the configuration – the output needs to be evaluated for that.
-#Cela accelere le workflow : https://stackoverflow.com/questions/52310599/what-does-minikube-docker-env-mean 
-
-
-#FTPS
-Utiliser lftp dans la console du container ftps. - apk add lftp - client ftp qui va faire requete serveur
-http://momh.fr/tutos/Linux/lftp 
-open -u user ftps-svc 
-
-
-Tuto :
-- https://howto.wared.fr/installation-wordpress-ubuntu-nginx/ 
-- https://www.itzgeek.com/how-tos/linux/debian/how-to-install-phpmyadmin-with-nginx-on-debian-10.html
+- videos kubernetes : http://bit.ly/2WN9Ojj
+- tuto WP et PMA : 
+	- https://howto.wared.fr/installation-wordpress-ubuntu-nginx/ 
+	- https://www.itzgeek.com/how-tos/linux/debian/how-to-install-phpmyadmin-with-nginx-on-debian-10.html
 
 # ft_services
