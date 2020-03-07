@@ -269,7 +269,7 @@ https://www.replex.io/blog/how-to-install-access-and-add-heapster-metrics-to-the
 kubectl delete clusterrolebinding kubernetes-dashboard : necessary prior to applying yaml file for dashboard
 https://kubernetes.io/fr/docs/tasks/access-application-cluster/web-ui-dashboard/
 
-<strong>#influxdb & kubernetes secrets<\strong> \ 
+<strong>#influxdb & kubernetes secrets</strong> \ 
 Kubernetes secrets are a way to store sensitive information (such as passwords) and inject them into running containers as either environment variables or mounted volumes. This is perfect for storing database credentials and connection information, both to configure InfluxDB and to tell Grafana how to connect to it.
 
 https://opensource.com/article/19/2/deploy-influxdb-grafana-kubernetes
@@ -287,15 +287,15 @@ will not perform the configuration – the output needs to be evaluated for that
 Liste parametres : http://nginx.org/en/docs/ngx_core_module.html#worker_connections 
 http, server, events, location, s'appellent un contexte.
 
-- <strong>worker_processes	auto<\strong> : it will be determined automatically by the number of core
-- <strong>worker_connections	1024<\strong> : Sets the maximum number of simultaneous connections that can be opened by a worker process.
+- <strong>worker_processes	auto</strong> : it will be determined automatically by the number of core
+- <strong>worker_connections	1024</strong> : Sets the maximum number of simultaneous connections that can be opened by a worker process.
 - MIME = Multipurpose Internet Mail Extensions. It is a standard that indicates the nature and format of a document, file, or assortment of bytes. All web browsers use the MIME type to determine how to process a URL. Hence, it is essential that Nginx send the correct MIME type in the response’s Content-Type header.
-- <strong>include        /etc/nginx/mime.types;<\strong> : Maps file name extensions to MIME types of responses. 
-- <strong>default_type       application/octet-stream;<\strong> : make a particular location emit the “application/octet-stream” MIME type for all requests. A MIME attachment with the content type "application/octet-stream" is a binary file. Typically, it will be an application or a document that must be opened in an application, such as a spreadsheet or word processor.
-- <strong>sendfile      on;<\strong> : permet de forcer l’utilisation de l’appel système sendfile pour tout ce qui concerne l’envoi de fichiers. sendfile permet de transférer des données d’un descripteur de fichier vers un autre directement dans l’espace noyau. Se substitue à l’utilisation combinée de read et write. Si vous servez des fichiers statiques stockés localement, sendfile est indispensable pour améliorer les performances de votre serveur Web.
+- <strong>include        /etc/nginx/mime.types;</strong> : Maps file name extensions to MIME types of responses. 
+- <strong>default_type       application/octet-stream;</strong> : make a particular location emit the “application/octet-stream” MIME type for all requests. A MIME attachment with the content type "application/octet-stream" is a binary file. Typically, it will be an application or a document that must be opened in an application, such as a spreadsheet or word processor.
+- <strong>sendfile      on;</strong> : permet de forcer l’utilisation de l’appel système sendfile pour tout ce qui concerne l’envoi de fichiers. sendfile permet de transférer des données d’un descripteur de fichier vers un autre directement dans l’espace noyau. Se substitue à l’utilisation combinée de read et write. Si vous servez des fichiers statiques stockés localement, sendfile est indispensable pour améliorer les performances de votre serveur Web.
 	https://thoughts.t37.net/optimisations-nginx-bien-comprendre-sendfile-tcp-nodelay-et-tcp-nopush-2ab3f33432ca
-- <strong>keepalive_timeout           3000;<\strong> :  indicating the minimum amount of time an idle connection has to be kept opened (in seconds)
-- <strong>gzip on;<\strong> : helps to reduce the size of transmitted data by half or even more. http://nginx.org/en/docs/http/ngx_http_gzip_module.html
+- <strong>keepalive_timeout           3000;</strong> :  indicating the minimum amount of time an idle connection has to be kept opened (in seconds)
+- <strong>gzip on;</strong> : helps to reduce the size of transmitted data by half or even more. http://nginx.org/en/docs/http/ngx_http_gzip_module.html
 
 <strong>#Ressources</strong>
 - Installation :
