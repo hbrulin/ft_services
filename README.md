@@ -28,8 +28,12 @@ open -u user ftps-svc
 Login : user. Pwd : services.
 ```
 
-- Grafana :
-TBD.
+- Grafana
+	- admin, admin
+
+- InfluxDb
+	- DB name : grafana_db
+	- log : admin, password
 
 <strong>#General Info</strong>
 
@@ -275,6 +279,8 @@ Kubernetes secrets are a way to store sensitive information (such as passwords) 
 https://opensource.com/article/19/2/deploy-influxdb-grafana-kubernetes
 https://kubernetes.io/fr/docs/concepts/configuration/secret/
 
+Tuto : https://blog.ouvrard.it/2015/11/24/influxdb-grafana/
+
 <strong>#eval minikube docker env</strong> \
 The command minikube docker-env returns a set of Bash environment variable exports 
 to configure your local environment to re-use the Docker daemon inside the Minikube instance.
@@ -296,6 +302,11 @@ http, server, events, location, s'appellent un contexte.
 	https://thoughts.t37.net/optimisations-nginx-bien-comprendre-sendfile-tcp-nodelay-et-tcp-nopush-2ab3f33432ca
 - <strong>keepalive_timeout           3000;</strong> :  indicating the minimum amount of time an idle connection has to be kept opened (in seconds)
 - <strong>gzip on;</strong> : helps to reduce the size of transmitted data by half or even more. http://nginx.org/en/docs/http/ngx_http_gzip_module.html
+
+
+<strong>#Copy to and from pods<\strong>
+https://medium.com/@nnilesh7756/copy-directories-and-files-to-and-from-kubernetes-container-pod-19612fa74660
+
 
 <strong>#Ressources</strong>
 - Installation :

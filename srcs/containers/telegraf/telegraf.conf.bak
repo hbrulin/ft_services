@@ -1,0 +1,12 @@
+[agent]
+ interval = "10s"
+ debug = false
+ hostname = "hostname"
+ utc = true
+ precision = "s"
+[outputs]
+[outputs.influxdb]
+ url = "http://IP:8086" 
+ database = "grafana_db"
+ username = "admin"
+ password = "password"

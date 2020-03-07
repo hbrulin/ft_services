@@ -41,13 +41,13 @@ spec:
           mountPath: "/var/run/docker.sock"
         env:
           - name: USER
-            value: telegraf
+            value: admin
           - name: INFLUX_URL
-            value: "http://192.168.99.109:8086"
+            value: "http://192.168.99.111:8086"
           - name: INFLUX_SKIP_DATABASE_CREATION
             value: "false"
           - name: INFLUX_PASSWORD
-            value: "services"
+            value: "password"
       volumes:
       - name: dockersock
         hostPath:
