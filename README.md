@@ -1,6 +1,36 @@
 # ft_services
 <strong>#Clustering with Kubernetes</strong>
 
+
+<strong>#Usage</strong> \
+- sh scripts/empty_space.sh & rm -r ~/Library/Caches/*
+- export MINIKUBE_HOME=/Users/hbrulin/goinfre
+- sh setup.sh 
+- wait forever
+
+- SSH:
+```sh
+kubectl exec -ti NGINX_POD_ID sh
+ssh admin@IP -p 22
+```
+Login : admin. Pwd : TBD.
+
+- PMA:
+Login : wp_admin. Pwd : admin.
+
+- FTPS:
+```sh
+kubectl exec -ti FTPS_POD_ID sh
+lftp
+open -u user ftps-svc
+```
+Login : user. Pwd : services.
+
+- Grafana :
+TBD.
+
+<strong>#General Info</strong>
+
 Les containers sont une méthode de virtualisation de système d’exploitation permettant de lancer une application et ses dépendances à travers un ensemble de processus isolés du reste du système. Cette méthode permet d’assurer le déploiement rapide et stable des applications dans n’importe quel environnement informatique.
 
 Faire tourner des environnements linux isoles les uns des autres dans des containers tout en se partageant le meme noyau linux, le kernel.
@@ -249,13 +279,6 @@ https://kubernetes.io/fr/docs/tasks/access-application-cluster/web-ui-dashboard/
 - https://www.youtube.com/watch?v=b5vJsYR-Vbo&t=4087s
 - ngnonx config files : http://nginx.org/en/docs/ngx_core_module.html#worker_connections 
 
-
-<strong>#Use</strong> \
-free space \
-export MINIKUBE_HOME=/Users/hbrulin/goinfre \
-sh setup.sh 
-
-
 #cannot connect to docker daemon
 https://unix.stackexchange.com/questions/252684/why-am-i-getting-cannot-connect-to-the-docker-daemon-when-the-daemon-is-runnin 
 
@@ -282,7 +305,7 @@ https://kubernetes.io/fr/docs/concepts/configuration/secret/
 
 
 #FTPS
-Utiliser lftp dans la console du container ftps. - apk add lftp 
+Utiliser lftp dans la console du container ftps. - apk add lftp - client ftp qui va faire requete serveur
 http://momh.fr/tutos/Linux/lftp 
 open -u user ftps-svc 
 
