@@ -14,8 +14,8 @@ WAIT FOREVER
 ```sh
 kubectl exec -ti NGINX_POD_ID sh
 ssh admin@IP -p 22
-```
 Login : admin. Pwd : TBD.
+```
 
 - PMA:
 Login : wp_admin. Pwd : admin.
@@ -25,8 +25,8 @@ Login : wp_admin. Pwd : admin.
 kubectl exec -ti FTPS_POD_ID sh
 lftp
 open -u user ftps-svc
-```
 Login : user. Pwd : services.
+```
 
 - Grafana :
 TBD.
