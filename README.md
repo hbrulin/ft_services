@@ -287,4 +287,8 @@ http://momh.fr/tutos/Linux/lftp
 open -u user ftps-svc 
 
 
+Tuto :
+- https://howto.wared.fr/installation-wordpress-ubuntu-nginx/ 
+- https://www.itzgeek.com/how-tos/linux/debian/how-to-install-phpmyadmin-with-nginx-on-debian-10.html
+
 # ft_services_2
