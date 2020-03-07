@@ -266,10 +266,10 @@ Time series databases : db ordonnee selon des points dans le temps. Usually sequ
 <strong>#Kubernetes Dashboard</strong> \
 https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md 
 https://www.replex.io/blog/how-to-install-access-and-add-heapster-metrics-to-the-kubernetes-dashboard
-kubectl delete clusterrolebinding kubernetes-dashboard : necessary priori to applying yaml file for dashboard
+kubectl delete clusterrolebinding kubernetes-dashboard : necessary prior to applying yaml file for dashboard
 https://kubernetes.io/fr/docs/tasks/access-application-cluster/web-ui-dashboard/
 
-<strong>#influxdb & kubernetes secrets<s\trong> \ 
+<strong>#influxdb & kubernetes secrets<\strong> \ 
 Kubernetes secrets are a way to store sensitive information (such as passwords) and inject them into running containers as either environment variables or mounted volumes. This is perfect for storing database credentials and connection information, both to configure InfluxDB and to tell Grafana how to connect to it.
 
 https://opensource.com/article/19/2/deploy-influxdb-grafana-kubernetes
