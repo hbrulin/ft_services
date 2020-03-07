@@ -3,10 +3,12 @@
 
 
 <strong>#Usage</strong> \
-- sh scripts/empty_space.sh & rm -r ~/Library/Caches/*
-- export MINIKUBE_HOME=/Users/hbrulin/goinfre
-- sh setup.sh 
-- wait forever
+```sh
+sh scripts/empty_space.sh & rm -r ~/Library/Caches/*
+export MINIKUBE_HOME=/Users/hbrulin/goinfre
+sh setup.sh 
+WAIT FOREVER
+```
 
 - SSH:
 ```sh
