@@ -160,7 +160,7 @@ curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/
 curl localhost:8080
 ```
 
-<strong>-> la cmd proxy et l'exportdu POD_NAME ne semblent pas necessaire avec des YAML qui definissent un Service :</strong>
+-> pas besoin de tout ca avec un yaml.
 
 In order for the new deployment to be accessible without using the Proxy, a Service is required which will be explained in the next modules.
 Use a service to <strong>expose</strong> an app outside a kubernetes cluster. A Service is defined using YAML.
