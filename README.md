@@ -2,7 +2,7 @@
 <strong>#Clustering with Kubernetes</strong>
 
 
-<strong>#Usage</strong> \
+<strong>#Usage</strong> 
 ```sh
 sh scripts/empty_space.sh & rm -r ~/Library/Caches/*
 export MINIKUBE_HOME=/Users/hbrulin/goinfre
