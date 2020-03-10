@@ -32,13 +32,19 @@ ls
 get pure-ftpd.pem
 !ls
 ```
-
 - Grafana
 	- admin, admin
 
 - InfluxDb
 	- DB name : telegraf
 	- log : admin, password
+
+- Crashtest
+	- kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c "ps"  
+	- kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c "kill number" 
+
+- Verifier accessibilité d'un port:
+	- telnet IP 21
 
 <strong>#General Info</strong>
 
