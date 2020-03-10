@@ -20,19 +20,21 @@ Login : admin. Pwd : TBD.
 - PMA:
 Login : wp_admin. Pwd : admin.
 
-- FTPS:
+- FTPS: Login : user. Pwd : services
 ```sh
 kubectl exec -ti FTPS_POD_ID sh
 lftp
-open -u user ftps-svc
-Login : user. Pwd : services.
+open -u user IP
+set ssl:verify-certificate false
+put /etc/ssl/private/pure-ftpd.pem
+ls
 ```
 
 - Grafana
 	- admin, admin
 
 - InfluxDb
-	- DB name : grafana_db
+	- DB name : telegraf
 	- log : admin, password
 
 <strong>#General Info</strong>
@@ -261,6 +263,8 @@ HTTP
 Utiliser lftp dans la console du container ftps. - apk add lftp - client ftp qui va faire requete serveur
 http://momh.fr/tutos/Linux/lftp 
 open -u user ftps-svc 
+
+https://www.howtoforge.com/how-to-configure-pureftpd-to-accept-tls-sessions-on-debian-lenny 
 
 <strong>#Grafana</strong> \
 Logiciel qui permet la virtualisation et la mise en forme de données métriques. Permet de réaliser dahsboard et graphiques depuis pls sources, dont des bases de données dites "time series databases" comme Influxdb.
