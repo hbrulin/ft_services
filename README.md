@@ -16,6 +16,8 @@ ssh admin@IP -p 6666
 Login : admin. Pwd : admin.
 ```
 
+- Wordpress wp-admin : admin, admin
+
 - PMA:
 Login : wp_admin. Pwd : admin.
 
