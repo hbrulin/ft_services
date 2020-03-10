@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  ven. 06 mars 2020 à 10:03
--- Version du serveur :  10.3.22-MariaDB-0+deb10u1
--- Version de PHP :  7.3.14-1~deb10u1
+-- Host: mysql-svc:3306
+-- Generation Time: Mar 10, 2020 at 05:17 PM
+-- Server version: 10.4.12-MariaDB
+-- PHP Version: 7.3.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `wordpress`
+-- Database: `wordpress`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_commentmeta`
+-- Table structure for table `wp_commentmeta`
 --
 
 CREATE TABLE `wp_commentmeta` (
@@ -38,7 +38,7 @@ CREATE TABLE `wp_commentmeta` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_comments`
+-- Table structure for table `wp_comments`
 --
 
 CREATE TABLE `wp_comments` (
@@ -60,7 +60,7 @@ CREATE TABLE `wp_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `wp_comments`
+-- Dumping data for table `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -69,7 +69,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_links`
+-- Table structure for table `wp_links`
 --
 
 CREATE TABLE `wp_links` (
@@ -91,7 +91,7 @@ CREATE TABLE `wp_links` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_options`
+-- Table structure for table `wp_options`
 --
 
 CREATE TABLE `wp_options` (
@@ -102,7 +102,7 @@ CREATE TABLE `wp_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `wp_options`
+-- Dumping data for table `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -209,7 +209,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (101, 'widget_archives', 'a:2:{i:2;a:3:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (102, 'widget_meta', 'a:2:{i:2;a:1:{s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (103, 'sidebars_widgets', 'a:4:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";}s:9:\"sidebar-2\";a:3:{i:0;s:10:\"archives-2\";i:1;s:12:\"categories-2\";i:2;s:6:\"meta-2\";}s:13:\"array_version\";i:3;}', 'yes'),
-(104, 'cron', 'a:2:{i:1583488988;a:5:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}s:7:\"version\";i:2;}', 'yes'),
+(104, 'cron', 'a:3:{i:1583488988;a:5:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1583857512;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
 (105, 'widget_pages', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (106, 'widget_calendar', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (107, 'widget_media_audio', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
@@ -219,12 +219,19 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (111, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (112, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (113, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(114, '_transient_doing_cron', '1583488988.3649070262908935546875', 'yes');
+(114, '_transient_doing_cron', '1583860559.5612459182739257812500', 'yes'),
+(115, 'nonce_key', ';a%EeEin+{uXHzIc*OkXw2t8OsXo%Kb;hJm`|X:rEtJ_UWFfssr<U&sXUu1:>j`?', 'no'),
+(116, 'nonce_salt', ',*,CtoyUp{@t&@*%Q>j[HZWEDm[vkKf&,e>[5U[.<Mjvl}:m.el2*#p3A!5lR?b!', 'no'),
+(117, 'auth_key', '^7e+9&Fa7po{P85%N6Y8w(}x6u :5fjhVF;D=&g49pVPH*;k~dU@; EjO?k5<H$4', 'no'),
+(118, 'auth_salt', '.)bdb!fxlDWyhsenlB&:-4G!>M5Rsk$8}krZy/U~4DiX-Z8oyefz8i5:B197,[zt', 'no'),
+(119, 'logged_in_key', '`^8dlcx@@W2 3f[wTJ&}sLBN|Z45w_`YWo`P,ukXba:lGv7&gK4rRaqU_T`}Vu@Q', 'no'),
+(120, 'logged_in_salt', '9>k/^+ah_HhxXk-?4:@I<|@9J2,2CJw83;#.kX2>~qx#3-2H}#3;rNL:6g@4lr%V', 'no'),
+(121, 'theme_mods_twentytwenty', 'a:1:{s:18:\"custom_css_post_id\";i:-1;}', 'yes');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_postmeta`
+-- Table structure for table `wp_postmeta`
 --
 
 CREATE TABLE `wp_postmeta` (
@@ -235,7 +242,7 @@ CREATE TABLE `wp_postmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `wp_postmeta`
+-- Dumping data for table `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -245,7 +252,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_posts`
+-- Table structure for table `wp_posts`
 --
 
 CREATE TABLE `wp_posts` (
@@ -275,7 +282,7 @@ CREATE TABLE `wp_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `wp_posts`
+-- Dumping data for table `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -286,7 +293,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_termmeta`
+-- Table structure for table `wp_termmeta`
 --
 
 CREATE TABLE `wp_termmeta` (
@@ -299,7 +306,7 @@ CREATE TABLE `wp_termmeta` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_terms`
+-- Table structure for table `wp_terms`
 --
 
 CREATE TABLE `wp_terms` (
@@ -310,7 +317,7 @@ CREATE TABLE `wp_terms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `wp_terms`
+-- Dumping data for table `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -319,7 +326,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_term_relationships`
+-- Table structure for table `wp_term_relationships`
 --
 
 CREATE TABLE `wp_term_relationships` (
@@ -329,7 +336,7 @@ CREATE TABLE `wp_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `wp_term_relationships`
+-- Dumping data for table `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -338,7 +345,7 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_term_taxonomy`
+-- Table structure for table `wp_term_taxonomy`
 --
 
 CREATE TABLE `wp_term_taxonomy` (
@@ -351,7 +358,7 @@ CREATE TABLE `wp_term_taxonomy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `wp_term_taxonomy`
+-- Dumping data for table `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -360,7 +367,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_usermeta`
+-- Table structure for table `wp_usermeta`
 --
 
 CREATE TABLE `wp_usermeta` (
@@ -371,7 +378,7 @@ CREATE TABLE `wp_usermeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `wp_usermeta`
+-- Dumping data for table `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -389,12 +396,16 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (12, 1, 'wp_capabilities', 'a:1:{s:13:\"administrator\";b:1;}'),
 (13, 1, 'wp_user_level', '10'),
 (14, 1, 'dismissed_wp_pointers', ''),
-(15, 1, 'show_welcome_panel', '1');
+(15, 1, 'show_welcome_panel', '1'),
+(16, 2, 'session_tokens', 'a:9:{s:64:\"112a5a81a74f7beb215b7e3e9e9f4d22f263c460ec4dffdf8d26f1cf66603eb7\";a:4:{s:10:\"expiration\";i:1584030312;s:2:\"ip\";s:10:\"172.17.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36\";s:5:\"login\";i:1583857512;}s:64:\"75527b252fcc3da979af714ff136bc1f2ed5d9b6fc945bce3a56b62de087cd77\";a:4:{s:10:\"expiration\";i:1584030419;s:2:\"ip\";s:10:\"172.17.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36\";s:5:\"login\";i:1583857619;}s:64:\"e2c252f241d5b47acdb3176ca679c5dee64c73d44e896595e0a3b7eab21f6132\";a:4:{s:10:\"expiration\";i:1584030670;s:2:\"ip\";s:10:\"172.17.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36\";s:5:\"login\";i:1583857870;}s:64:\"d5e044cd477818c404318beca3d713a9b9266d4c917fc98811e5c472a8e6ed67\";a:4:{s:10:\"expiration\";i:1584031611;s:2:\"ip\";s:10:\"172.17.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36\";s:5:\"login\";i:1583858811;}s:64:\"c0abbe712011c794c8dac67c7fcb82c148478217c95ddb38080adcbaacdba9e1\";a:4:{s:10:\"expiration\";i:1584031618;s:2:\"ip\";s:10:\"172.17.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36\";s:5:\"login\";i:1583858818;}s:64:\"21f7fea727918b1ff51bc381bbec6e6667a15f825dc80d0d51195a844e09256f\";a:4:{s:10:\"expiration\";i:1584031861;s:2:\"ip\";s:10:\"172.17.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36\";s:5:\"login\";i:1583859061;}s:64:\"30bb621abd730ea2fc7c2390209a544223d1630d5333ca97376eb6ad756acf3e\";a:4:{s:10:\"expiration\";i:1584031910;s:2:\"ip\";s:10:\"172.17.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36\";s:5:\"login\";i:1583859110;}s:64:\"0b02a3267f8b50e9ce03324d8bb260ff1995c41aa178ff8eee0d6211308165a5\";a:4:{s:10:\"expiration\";i:1584031922;s:2:\"ip\";s:10:\"172.17.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36\";s:5:\"login\";i:1583859122;}s:64:\"95699343e4b2209b36a73e910c1997a901ff5afb5b0fceb81299de7f7fe2ae79\";a:4:{s:10:\"expiration\";i:1584032940;s:2:\"ip\";s:10:\"172.17.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36\";s:5:\"login\";i:1583860140;}}'),
+(17, 2, 'wp_capabilities', 'a:1:{s:13:”administrator”;s:1:”1″;}'),
+(18, 2, 'wp_user_level', '10'),
+(19, 2, 'wp_user_level', '10');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `wp_users`
+-- Table structure for table `wp_users`
 --
 
 CREATE TABLE `wp_users` (
@@ -411,7 +422,7 @@ CREATE TABLE `wp_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `wp_users`
+-- Dumping data for table `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
@@ -421,11 +432,11 @@ INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_
 (5, 'user3', '$P$BYk30Cp/ILESTe3HVr58JMsAAkXe0w.', 'user3', 'user3@services.42', '', '2020-02-07 11:25:25', '', 0, 'User3 Services');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `wp_commentmeta`
+-- Indexes for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -433,7 +444,7 @@ ALTER TABLE `wp_commentmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Index pour la table `wp_comments`
+-- Indexes for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
   ADD PRIMARY KEY (`comment_ID`),
@@ -444,14 +455,14 @@ ALTER TABLE `wp_comments`
   ADD KEY `comment_author_email` (`comment_author_email`(10));
 
 --
--- Index pour la table `wp_links`
+-- Indexes for table `wp_links`
 --
 ALTER TABLE `wp_links`
   ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Index pour la table `wp_options`
+-- Indexes for table `wp_options`
 --
 ALTER TABLE `wp_options`
   ADD PRIMARY KEY (`option_id`),
@@ -459,7 +470,7 @@ ALTER TABLE `wp_options`
   ADD KEY `autoload` (`autoload`);
 
 --
--- Index pour la table `wp_postmeta`
+-- Indexes for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -467,7 +478,7 @@ ALTER TABLE `wp_postmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Index pour la table `wp_posts`
+-- Indexes for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
   ADD PRIMARY KEY (`ID`),
@@ -477,7 +488,7 @@ ALTER TABLE `wp_posts`
   ADD KEY `post_author` (`post_author`);
 
 --
--- Index pour la table `wp_termmeta`
+-- Indexes for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -485,7 +496,7 @@ ALTER TABLE `wp_termmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Index pour la table `wp_terms`
+-- Indexes for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -493,14 +504,14 @@ ALTER TABLE `wp_terms`
   ADD KEY `name` (`name`(191));
 
 --
--- Index pour la table `wp_term_relationships`
+-- Indexes for table `wp_term_relationships`
 --
 ALTER TABLE `wp_term_relationships`
   ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Index pour la table `wp_term_taxonomy`
+-- Indexes for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   ADD PRIMARY KEY (`term_taxonomy_id`),
@@ -508,7 +519,7 @@ ALTER TABLE `wp_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Index pour la table `wp_usermeta`
+-- Indexes for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   ADD PRIMARY KEY (`umeta_id`),
@@ -516,7 +527,7 @@ ALTER TABLE `wp_usermeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Index pour la table `wp_users`
+-- Indexes for table `wp_users`
 --
 ALTER TABLE `wp_users`
   ADD PRIMARY KEY (`ID`),
@@ -525,74 +536,74 @@ ALTER TABLE `wp_users`
   ADD KEY `user_email` (`user_email`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `wp_commentmeta`
+-- AUTO_INCREMENT for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `wp_comments`
+-- AUTO_INCREMENT for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
   MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `wp_links`
+-- AUTO_INCREMENT for table `wp_links`
 --
 ALTER TABLE `wp_links`
   MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `wp_options`
+-- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
--- AUTO_INCREMENT pour la table `wp_postmeta`
+-- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `wp_posts`
+-- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
   MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `wp_termmeta`
+-- AUTO_INCREMENT for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `wp_terms`
+-- AUTO_INCREMENT for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
   MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `wp_term_taxonomy`
+-- AUTO_INCREMENT for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `wp_usermeta`
+-- AUTO_INCREMENT for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
-  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT pour la table `wp_users`
+-- AUTO_INCREMENT for table `wp_users`
 --
 ALTER TABLE `wp_users`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
