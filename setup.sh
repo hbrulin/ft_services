@@ -9,14 +9,14 @@ sed_set_ip()
 mount_container()
 {
 	echo "\033[1;32m->\033[0;32m Building $1 image ... \n"
-	docker build -t services/$1 srcs/containers/$1/ &> /dev/null
+	docker build -t services/$1 srcs/containers/$1/
 	sleep 1
 }
 
 up_service()
 {
 	echo "\033[1;32m->\033[0;32m Up $1 service ... \n"
-	kubectl apply -f srcs/yaml/$1.yaml &> /dev/null
+	kubectl apply -f srcs/yaml/$1.yaml
 	sleep 1
 }
 

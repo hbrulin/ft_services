@@ -58,7 +58,6 @@ spec:
         image: services/nginx
         ports:
         - containerPort: 1234
-          name: ssh
         - containerPort: 80
           name: http
         - containerPort: 443

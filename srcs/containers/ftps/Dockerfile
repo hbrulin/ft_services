@@ -12,7 +12,6 @@ RUN apk upgrade && \
 RUN apk add lftp
 
 COPY setup.sh .
-COPY pure-ftpd.pem /etc/ssl/private/pure-ftpd.pem
 RUN chmod +x setup.sh
 
 EXPOSE 21 21000
