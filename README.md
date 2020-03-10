@@ -230,7 +230,8 @@ Champ image d'un deploy : img docker.
 On separe les differentes instances qu'on deécrit par '---'.
 
 <strong>#Volumes & persistent volumes</strong> \
-Il faut avoir defini un volume dans le docker, puis dans le dasboard kubernetes on peut definir volume persistent.
+Ne dependent pas du pod ou conteneur si celui-ci crash.
+https://www.youtube.com/watch?v=inJ7YJ-jt8I
 
 <strong>#FTPS</strong> \
 File Transfer Protocol Secure. Protocole d'échange informatique de fichiers sur réseau TCP/IP.
@@ -311,7 +312,7 @@ http, server, events, location, s'appellent un contexte.
 https://medium.com/@nnilesh7756/copy-directories-and-files-to-and-from-kubernetes-container-pod-19612fa74660
 
 
-<strong>#Copy to and from pods</strong>
+<strong>#SSH</strong>
 https://www.youtube.com/watch?v=Kp9hIsIK38I
 
 <strong>#Ressources</strong>
