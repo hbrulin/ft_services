@@ -23,6 +23,8 @@ RUN rm /etc/nginx/nginx.conf
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY index.html /www/index.html
+COPY index.css /www/index.css
+COPY s-l1600.jpg /www/s-l1600.jpg
 COPY sshd_config /etc/ssh/sshd_config
 COPY setup.sh .
 

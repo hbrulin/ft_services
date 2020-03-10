@@ -230,7 +230,8 @@ Champ image d'un deploy : img docker.
 On separe les differentes instances qu'on deécrit par '---'.
 
 <strong>#Volumes & persistent volumes</strong> \
-Ne dependent pas du pod ou conteneur si celui-ci crash.
+Persistent volumes : Ne dependent pas du pod ou conteneur si celui-ci crash.
+Persistent volume claim : declare size needed. Permet d'utiliser meme template apres sur differents pods, pour que kubernetes mount le volume sur chaque pod.
 https://www.youtube.com/watch?v=inJ7YJ-jt8I
 
 <strong>#FTPS</strong> \
