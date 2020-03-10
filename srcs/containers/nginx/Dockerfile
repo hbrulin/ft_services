@@ -18,11 +18,12 @@ RUN mkdir /etc/nginx/ssl \
 
 # Nginx config
 RUN rm /etc/nginx/nginx.conf
+#RUN rm /var/lib/nginx/html/index.html
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY id_rsa_key_ssh /etc/ssh/ssh_host_rsa_key
 COPY sshd_config /etc/ssh/
-
+COPY index.html /www/index.html
 COPY setup.sh .
 
 RUN chmod +x setup.sh
