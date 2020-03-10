@@ -12,7 +12,6 @@ WAIT FOREVER
 
 - SSH: dans zsh
 ```sh
-kubectl exec -ti NGINX_POD_ID sh
 ssh admin@IP -p 6666
 Login : admin. Pwd : admin.
 ```
@@ -308,9 +307,12 @@ http, server, events, location, s'appellent un contexte.
 - <strong>gzip on;</strong> : helps to reduce the size of transmitted data by half or even more. http://nginx.org/en/docs/http/ngx_http_gzip_module.html
 
 
-<strong>#Copy to and from pods<\strong>
+<strong>#Copy to and from pods</strong>
 https://medium.com/@nnilesh7756/copy-directories-and-files-to-and-from-kubernetes-container-pod-19612fa74660
 
+
+<strong>#Copy to and from pods</strong>
+https://www.youtube.com/watch?v=Kp9hIsIK38I
 
 <strong>#Ressources</strong>
 - Installation :
