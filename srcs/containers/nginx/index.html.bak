@@ -6,7 +6,8 @@
 	</head>
 	<body>
 		<img src="s-l1600.jpg">
-		<a href="http://192.168.99.115:5050">Wordpress</a>
-		<a href="http://192.168.99.115:5000">PhpMyAdmin</a>
-		<a href="http://192.168.99.115:3000">Grafana</a>
+		<a href="http://192.168.99.116:5050">Wordpress</a>
+		<a href="http://192.168.99.116:5050/wp-admin">Wordpress admin</a>
+		<a href="http://192.168.99.116:5000">PhpMyAdmin</a>
+		<a href="http://192.168.99.116:3000">Grafana</a>
 	</body>

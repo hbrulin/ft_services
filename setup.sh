@@ -45,6 +45,7 @@ sed -i.bak 's/MINIKUBE_IP/'"$server_ip"'/g' srcs/containers/ftps/setup.sh
 sed -i.bak 's/IP/'"$server_ip"'/g' srcs/containers/nginx/index.html
 sed -i.bak 's/IP/'"$server_ip"'/g' srcs/containers/nginx/index.html
 sed -i.bak 's/IP/'"$server_ip"'/g' srcs/containers/nginx/index.html
+sed -i.bak 's/IP/'"$server_ip"'/g' srcs/containers/nginx/index.html
 
 echo "UPDATE data_source SET url = 'http://$server_ip:8086'" | sqlite3 srcs/containers/grafana/grafana.db
 

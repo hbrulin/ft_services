@@ -27,6 +27,8 @@ open -u user IP
 set ssl:verify-certificate false
 put /etc/ssl/private/pure-ftpd.pem
 ls
+get pure-ftpd.pem
+!ls
 ```
 
 - Grafana
