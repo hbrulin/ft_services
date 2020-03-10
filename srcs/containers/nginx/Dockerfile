@@ -15,19 +15,19 @@ RUN adduser -D -g 'www' www \
 # SSL
 RUN mkdir /etc/nginx/ssl \
 && openssl req -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out /etc/nginx/ssl/www.pem -keyout /etc/nginx/ssl/www.key -subj "/C=FR/ST=Paris/L=Paris/O=42 School/OU=hbrulin/CN=ft_services"
+RUN ssh-keygen -A
+
 
 # Nginx config
 RUN rm /etc/nginx/nginx.conf
-#RUN rm /var/lib/nginx/html/index.html
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
-COPY id_rsa.pub /etc/ssh/id_rsa.pub
-COPY sshd_config /etc/ssh/
 COPY index.html /www/index.html
+COPY sshd_config /etc/ssh/sshd_config
 COPY setup.sh .
 
 RUN chmod +x setup.sh
-RUN chmod 600 /etc/ssh/id_rsa.pub
+#RUN chmod 600 /etc/ssh/ssh_host_*
 
-EXPOSE 1234 80 443
+EXPOSE 6666 80 443
 CMD ./setup.sh

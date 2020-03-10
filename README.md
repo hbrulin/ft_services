@@ -10,11 +10,11 @@ sh setup.sh
 WAIT FOREVER
 ```
 
-- SSH:
+- SSH: dans zsh
 ```sh
 kubectl exec -ti NGINX_POD_ID sh
-ssh admin@IP -p 22
-Login : admin. Pwd : TBD.
+ssh admin@IP -p 6666
+Login : admin. Pwd : admin.
 ```
 
 - PMA:

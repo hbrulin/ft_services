@@ -22,8 +22,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 1234
-    nodePort: 1234
+  - port: 6666
+    nodePort: 6666
     protocol: TCP
     name: ssh
   - port: 443
@@ -57,7 +57,8 @@ spec:
           value: admin
         image: services/nginx
         ports:
-        - containerPort: 1234
+        - containerPort: 6666
+          name: ssh
         - containerPort: 80
           name: http
         - containerPort: 443
