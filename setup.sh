@@ -74,5 +74,5 @@ sed -i.bak 's/'"$server_ip"'/IP/g' srcs/containers/nginx/index.html
 sleep 1
 
 
-echo "\033[1;32m+>\033[0;32m Open website...\n"
+echo "\033[1;32m->\033[0;32m Open website...\n"
 open http://$server_ip

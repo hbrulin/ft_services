@@ -40,9 +40,12 @@ get pure-ftpd.pem
 	- DB name : telegraf
 	- log : admin, password
 
-- Crashtest
-	- kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c "ps"  
-	- kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c "kill number" 
+- Crashtests
+	- kill processes within container:
+		- kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c "ps"  
+		- kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c "kill number" 
+	- stop a container : not available in Kubernetes. Solution is to scale nb of replicas to 0.
+		- kubectl scale --replicas=0 deployment/NAMEOFDEPLOY
 
 - Verifier accessibilité d'un port:
 	- telnet IP 21
