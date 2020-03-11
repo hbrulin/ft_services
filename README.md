@@ -17,6 +17,7 @@ Login : admin. Pwd : admin.
 ```
 
 - Wordpress wp-admin : admin, admin
+	- En cas d'absence du fichier .htaccess et de pb permalinks : https://www.wpbeginner.com/beginners-guide/why-you-cant-find-htaccess-file-on-your-wordpress-site/
 
 - PMA:
 Login : wp_admin. Pwd : admin.

@@ -48,6 +48,7 @@ spec:
       labels:
         app: nginx-app
     spec:
+      restartPolicy: Always
       containers:
       - name: nginx
         env:
@@ -64,6 +65,11 @@ spec:
         - containerPort: 443
           name: https
         imagePullPolicy: Never
+        livenessProbe:
+          tcpSocket:
+            port: 6666
+          initialDelaySeconds: 30
+          periodSeconds: 30
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
