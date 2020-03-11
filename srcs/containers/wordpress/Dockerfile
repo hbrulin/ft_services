@@ -9,10 +9,11 @@ RUN wget https://wordpress.org/latest.tar.gz \
 && rm -rf /var/cache/apk/*
 
 COPY wp-config.php /www/wp-config.php
-COPY .htaccess /www/
+#COPY .htaccess /www/
 COPY setup.sh .
 
 RUN chmod +x setup.sh
+#RUN chmod 644 /www/.htaccess
 
 EXPOSE 5050
 CMD ./setup.sh
