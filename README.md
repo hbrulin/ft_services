@@ -43,7 +43,7 @@ get pure-ftpd.pem
 - Crashtests
 	- kill processes within container:
 		- kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c "ps"  
-		- kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c "kill number" 
+		- kubectl exec -it $(kubectl get pods | grep mysql | cut -d" " -f1) -- /bin/sh -c "kill number" : parfois a faire 2 fois
 	- stop a container : not available in Kubernetes. Solution is to scale nb of replicas to 0.
 		- kubectl scale --replicas=0 deployment/NAMEOFDEPLOY
 
