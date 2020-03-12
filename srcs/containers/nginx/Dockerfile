@@ -29,7 +29,6 @@ COPY sshd_config /etc/ssh/sshd_config
 COPY setup.sh .
 
 RUN chmod +x setup.sh
-#RUN chmod 600 /etc/ssh/ssh_host_*
 
 EXPOSE 6666 80 443
 CMD ./setup.sh
